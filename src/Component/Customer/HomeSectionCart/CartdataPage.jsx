@@ -52,14 +52,11 @@ const CartdataPage = () => {
   const handleclicks = () => {
     setquery(null)
   }
-  console.log(query)
-  function filetdata(data) {
 
-    return data
-  }
-  if (query) {
-    const val = data.filter(datas => datas.name.toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!==-1)
+  if (query !== null) {
+    const val = data.filter(datas => datas.name.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !== -1)
     data = val
+
   }
   return (
     <>
